@@ -1,0 +1,27 @@
+[book]
+authors = ["wg-macros"]
+language = "en"
+multilingual = false
+src = "src"
+title = "wg-macros"
+
+[rust]
+edition = "2018"
+
+[output.html]
+site-url = "/wg-macros/"
+git-repository-url = "https://github.com/rust-lang/wg-macros"
+additional-js =["mermaid.min.js", "mermaid-init.js"]
+edit-url-template = "https://github.com/rust-lang/wg-macros/edit/master/{path}"
+
+[output.html.fold]
+enable = true
+level = 0
+[preprocessor]
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[preprocessor.graphviz]
+command = "mdbook-graphviz"
+
+[output.html.redirect]
